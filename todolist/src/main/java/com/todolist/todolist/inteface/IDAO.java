@@ -8,4 +8,5 @@ public interface IDAO<T> {
     boolean delete(T o);
     T findById(int id);
     List<T> findAll();
+    boolean updateStatus(T o);
 }

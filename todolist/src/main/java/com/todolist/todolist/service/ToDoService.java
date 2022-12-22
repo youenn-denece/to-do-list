@@ -56,4 +56,12 @@ public class ToDoService implements IDAO<ToDoList> {
         return toDoQuery.list();
 
     }
+
+    @Override
+    public boolean updateStatus(ToDoList o) {
+        session.beginTransaction();
+        session.update(o);
+        session.getTransaction().commit();
+        return true;
+    }
 }
